@@ -8,7 +8,7 @@ android {
         description "builds JNI libs from source. " +
                 "This requires the Android NDK and is optional as precompiled libs are provided."
 
-        def root = project(':SPD-classes').projectDir
+        def root = project(':UPD-classes').projectDir
         def ndkDir = android.ndkDirectory
 
         //Need to execute through cmd on windows systems
