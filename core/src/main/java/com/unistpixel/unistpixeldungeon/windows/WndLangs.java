@@ -51,7 +51,8 @@ public class WndLangs extends Window {
 
 		final ArrayList<Languages> langs = new ArrayList<>(Arrays.asList(Languages.values()));
 
-		Languages nativeLang = Languages.matchLocale(Locale.getDefault());
+		// Languages nativeLang = Languages.matchLocale(Locale.getDefault());
+		Languages nativeLang = Languages.matchCode("ko"); // because we only provides Korean.
 		langs.remove(nativeLang);
 		//move the native language to the top.
 		langs.add(0, nativeLang);
@@ -60,7 +61,7 @@ public class WndLangs extends Window {
 
 		//language buttons layout
 		int y = 0;
-		for (int i = 0; i < langs.size(); i++){
+		for (int i = 0; i < 1; i++){ // langs.size() -> 1 because we only provides Korean.
 			final int langIndex = i;
 			RedButton btn = new RedButton(Messages.titleCase(langs.get(i).nativeName())){
 				@Override
