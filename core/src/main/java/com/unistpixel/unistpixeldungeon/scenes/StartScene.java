@@ -150,7 +150,7 @@ public class StartScene extends PixelScene {
 		float centralHeight = buttonY - title.y - title.height();
 
 		HeroClass[] classes = {
-				HeroClass.WARRIOR, HeroClass.MAGE, HeroClass.ROGUE, HeroClass.HUNTRESS
+				HeroClass.WARRIOR //, HeroClass.MAGE, HeroClass.ROGUE, HeroClass.HUNTRESS // 전사만 지원함
 		};
 		for (HeroClass cl : classes) {
 			ClassShield shield = new ClassShield( cl );
@@ -158,6 +158,8 @@ public class StartScene extends PixelScene {
 			add( shield );
 		}
 		if (UNISTPixelDungeon.landscape()) {
+			/*
+			// Hero 클래스 1개만 씀
 			float shieldW = width / 4;
 			float shieldH = Math.min( centralHeight, shieldW );
 			top = title.y + title.height + (centralHeight - shieldH) / 2;
@@ -166,14 +168,30 @@ public class StartScene extends PixelScene {
 				shield.setRect( left + i * shieldW, top, shieldW, shieldH );
 				align(shield);
 			}
+			*/
 
+			float shieldW = width / 4;
+			float shieldH = Math.min( centralHeight, shieldW );
+			top = title.y + title.height + (centralHeight - shieldH) / 2;
+			for (int i=0; i < classes.length; i++) {
+				ClassShield shield = shields.get( classes[i] );
+				// 중앙에 오게 설정
+				shield.setRect( (w - shieldW) / 2.0f, (h - shieldH) / 2.0f, shieldW, shieldH );
+				align(shield);
+			}
+
+			/*
+			// 가운데 ChallengeButton 삭제
 			ChallengeButton challenge = new ChallengeButton();
 			challenge.setPos(
 					w/2 - challenge.width()/2,
 					top + shieldH/2 - challenge.height()/2 );
 			add( challenge );
+			*/
 
 		} else {
+			/*
+			// Hero 클래스 1개만 씀
 			float shieldW = width / 2;
 			float shieldH = Math.min( centralHeight / 2, shieldW * 1.2f );
 			top = title.y + title.height() + centralHeight / 2 - shieldH;
@@ -184,14 +202,30 @@ public class StartScene extends PixelScene {
 						top + (i / 2) * shieldH,
 						shieldW, shieldH );
 				align(shield);
+			}*/
+
+			float shieldW = width / 2;
+			float shieldH = Math.min( centralHeight / 2, shieldW * 1.2f );
+			top = title.y + title.height() + centralHeight / 2 - shieldH;
+			for (int i=0; i < classes.length; i++) {
+				ClassShield shield = shields.get( classes[i] );
+				// 중앙에 오게 설정
+				shield.setRect(
+						(w - shieldW) / 2.0f,
+						(h - shieldH) / 2.0f,
+						shieldW, shieldH );
+				align(shield);
 			}
 
+			/*
+			// 가운데 ChallengeButton 삭제
 			ChallengeButton challenge = new ChallengeButton();
 			challenge.setPos(
 					w/2 - challenge.width()/2,
 					top + shieldH - challenge.height()/2 );
 			align(challenge);
 			add( challenge );
+			*/
 
 		}
 
