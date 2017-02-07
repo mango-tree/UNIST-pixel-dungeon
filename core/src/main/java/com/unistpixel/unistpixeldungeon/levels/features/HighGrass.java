@@ -64,6 +64,7 @@ public class HighGrass {
 
 			if (naturalismLevel >= 0) {
 				// Seed, scales from 1/16 to 1/4
+				/* Seed 안나오게 함
 				if (Random.Int(16 - ((int) (naturalismLevel * 3))) == 0) {
 					Item seed = Generator.random(Generator.Category.SEED);
 
@@ -75,11 +76,12 @@ public class HighGrass {
 					} else
 						level.drop(seed, pos).sprite.drop();
 				}
-
+				*/
 				// Dew, scales from 1/6 to 1/3
 				if (Random.Int(24 - naturalismLevel*3) <= 3) {
 					level.drop(new Dewdrop(), pos).sprite.drop();
 				}
+
 			}
 		}
 

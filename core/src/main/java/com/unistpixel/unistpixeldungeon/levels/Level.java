@@ -723,6 +723,7 @@ public abstract class Level implements Bundlable {
 	public Plant plant( Plant.Seed seed, int pos ) {
 
 		Plant plant = plants.get( pos );
+
 		if (plant != null) {
 			plant.wither();
 		}
@@ -737,7 +738,7 @@ public abstract class Level implements Bundlable {
 		
 		plant = seed.couch( pos );
 		plants.put( pos, plant );
-		
+
 		GameScene.plantSeed( pos );
 		
 		return plant;
