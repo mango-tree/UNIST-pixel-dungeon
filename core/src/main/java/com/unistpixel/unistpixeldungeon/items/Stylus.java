@@ -34,10 +34,11 @@ import com.watabou.noosa.audio.Sample;
 
 import java.util.ArrayList;
 
+// Glyph 삭제로 필요가 없어짐, 같이 삭제
 public class Stylus extends Item {
 	
 	private static final float TIME_TO_INSCRIBE = 2;
-	
+
 	private static final String AC_INSCRIBE = "INSCRIBE";
 	
 	{
