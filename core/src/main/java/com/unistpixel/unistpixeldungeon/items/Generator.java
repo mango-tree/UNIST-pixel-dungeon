@@ -399,6 +399,8 @@ public class Generator {
 				Item item = randomArtifact();
 				//if we're out of artifacts, return a ring instead.
 				return item != null ? item : random(Category.RING);
+			case WAND:
+				return randomWeapon();
 			default:
 				return ((Item)cat.classes[Random.chances( cat.probs )].newInstance()).random();
 			}

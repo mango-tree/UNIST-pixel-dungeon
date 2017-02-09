@@ -32,7 +32,9 @@ public class Rotberry extends Plant {
 
 	@Override
 	public void activate() {
+		/* seed 안나오게 함
 		Dungeon.level.drop( new Seed(), pos ).sprite.drop();
+		*/
 	}
 
 	public static class Seed extends Plant.Seed {

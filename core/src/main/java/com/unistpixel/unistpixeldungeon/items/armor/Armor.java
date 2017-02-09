@@ -245,7 +245,8 @@ public class Armor extends EquipableItem {
 	public Item upgrade( boolean inscribe ) {
 
 		if (inscribe && (glyph == null || glyph.curse())){
-			inscribe( Glyph.random() );
+			// 업그레이드 할 때 Glyph 생김 방지
+			// inscribe( Glyph.random() );
 		} else if (!inscribe && Random.Float() > Math.pow(0.9, level())){
 			inscribe(null);
 		}
@@ -385,20 +386,21 @@ public class Armor extends EquipableItem {
 	}
 
 	public Armor inscribe( Glyph glyph ) {
+		// Curse를 위해 남겨둠
 		this.glyph = glyph;
 
 		return this;
 	}
 
 	public Armor inscribe() {
-
+		/* Glyph 삭제
 		Class<? extends Glyph> oldGlyphClass = glyph != null ? glyph.getClass() : null;
 		Glyph gl = Glyph.random();
 		while (gl.getClass() == oldGlyphClass) {
 			gl = Armor.Glyph.random();
 		}
-
-		return inscribe( gl );
+		*/
+		return this;
 	}
 
 	public boolean hasGlyph(Class<?extends Glyph> type) {

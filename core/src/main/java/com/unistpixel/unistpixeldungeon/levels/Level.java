@@ -211,12 +211,15 @@ public abstract class Level implements Bundlable {
 					addItemToSpawn( new ScrollOfUpgrade() );
 				Dungeon.limitedDrops.upgradeScrolls.count++;
 			}
+
+			/* Stylus 삭제
 			if (Dungeon.asNeeded()) {
 				if (Random.Float() > Math.pow(0.925, bonus))
 					addItemToSpawn( new Stylus() );
 				addItemToSpawn( new Stylus() );
 				Dungeon.limitedDrops.arcaneStyli.count++;
 			}
+			*/
 
 			DriedRose rose = Dungeon.hero.belongings.getItem( DriedRose.class );
 			if (rose != null && !rose.cursed){
@@ -723,6 +726,7 @@ public abstract class Level implements Bundlable {
 	public Plant plant( Plant.Seed seed, int pos ) {
 
 		Plant plant = plants.get( pos );
+
 		if (plant != null) {
 			plant.wither();
 		}
@@ -737,7 +741,7 @@ public abstract class Level implements Bundlable {
 		
 		plant = seed.couch( pos );
 		plants.put( pos, plant );
-		
+
 		GameScene.plantSeed( pos );
 		
 		return plant;

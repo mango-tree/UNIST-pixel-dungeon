@@ -42,7 +42,9 @@ public class Starflower extends Plant {
 		if (ch != null) Buff.prolong(ch, Bless.class, 30f);
 
 		if (Random.Int(5) == 0){
+			/* seed 안나오게 함
 			Dungeon.level.drop(new Seed(), pos).sprite.drop();
+			*/
 		}
 	}
 
