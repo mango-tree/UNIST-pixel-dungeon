@@ -209,21 +209,23 @@ public class Generator {
 		Category.GOLD.classes = new Class<?>[]{
 			Gold.class };
 		Category.GOLD.probs = new float[]{ 1 };
-		
+
+		// 나오는 주문서 5개로 수정
 		Category.SCROLL.classes = new Class<?>[]{
 			ScrollOfIdentify.class,
-			ScrollOfTeleportation.class,
+			// ScrollOfTeleportation.class,
 			ScrollOfRemoveCurse.class,
 			ScrollOfUpgrade.class,
-			ScrollOfRecharging.class,
+			// ScrollOfRecharging.class,
 			ScrollOfMagicMapping.class,
-			ScrollOfRage.class,
-			ScrollOfTerror.class,
-			ScrollOfLullaby.class,
-			ScrollOfMagicalInfusion.class,
+			// ScrollOfRage.class,
+			// ScrollOfTerror.class,
+			// ScrollOfLullaby.class,
+			// ScrollOfMagicalInfusion.class,
 			ScrollOfPsionicBlast.class,
-			ScrollOfMirrorImage.class };
-		Category.SCROLL.probs = new float[]{ 30, 10, 20, 0, 15, 15, 12, 8, 8, 0, 4, 10 };
+			// ScrollOfMirrorImage.class
+		};
+		Category.SCROLL.probs = new float[]{30, 20, 0, 15, 4}; //{ 30, 10, 20, 0, 15, 15, 12, 8, 8, 0, 4, 10 };
 		
 		Category.POTION.classes = new Class<?>[]{
 			PotionOfHealing.class,
