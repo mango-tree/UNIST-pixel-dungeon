@@ -44,19 +44,20 @@ public abstract class Scroll extends Item {
 
 	protected int initials;
 
+	// 나오는 주문서 5개로 수정
 	private static final Class<?>[] scrolls = {
 		ScrollOfIdentify.class,
 		ScrollOfMagicMapping.class,
-		ScrollOfRecharging.class,
+		// ScrollOfRecharging.class,
 		ScrollOfRemoveCurse.class,
-		ScrollOfTeleportation.class,
+		// ScrollOfTeleportation.class,
 		ScrollOfUpgrade.class,
-		ScrollOfRage.class,
-		ScrollOfTerror.class,
-		ScrollOfLullaby.class,
-		ScrollOfMagicalInfusion.class,
+		// ScrollOfRage.class,
+		// ScrollOfTerror.class,
+		// ScrollOfLullaby.class,
+		// ScrollOfMagicalInfusion.class,
 		ScrollOfPsionicBlast.class,
-		ScrollOfMirrorImage.class
+		// ScrollOfMirrorImage.class
 	};
 
 	private static final HashMap<String, Integer> runes = new HashMap<String, Integer>() {
@@ -66,6 +67,7 @@ public abstract class Scroll extends Item {
 			put("LAGUZ",ItemSpriteSheet.SCROLL_LAGUZ);
 			put("YNGVI",ItemSpriteSheet.SCROLL_YNGVI);
 			put("GYFU",ItemSpriteSheet.SCROLL_GYFU);
+			/* 나오는 랜덤이름 5개로 수정
 			put("RAIDO",ItemSpriteSheet.SCROLL_RAIDO);
 			put("ISAZ",ItemSpriteSheet.SCROLL_ISAZ);
 			put("MANNAZ",ItemSpriteSheet.SCROLL_MANNAZ);
@@ -73,6 +75,7 @@ public abstract class Scroll extends Item {
 			put("BERKANAN",ItemSpriteSheet.SCROLL_BERKANAN);
 			put("ODAL",ItemSpriteSheet.SCROLL_ODAL);
 			put("TIWAZ",ItemSpriteSheet.SCROLL_TIWAZ);
+			*/
 		}
 	};
 	

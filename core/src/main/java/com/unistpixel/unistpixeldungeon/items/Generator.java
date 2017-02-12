@@ -209,21 +209,23 @@ public class Generator {
 		Category.GOLD.classes = new Class<?>[]{
 			Gold.class };
 		Category.GOLD.probs = new float[]{ 1 };
-		
+
+		// 나오는 주문서 5개로 수정
 		Category.SCROLL.classes = new Class<?>[]{
 			ScrollOfIdentify.class,
-			ScrollOfTeleportation.class,
+			// ScrollOfTeleportation.class,
 			ScrollOfRemoveCurse.class,
 			ScrollOfUpgrade.class,
-			ScrollOfRecharging.class,
+			// ScrollOfRecharging.class,
 			ScrollOfMagicMapping.class,
-			ScrollOfRage.class,
-			ScrollOfTerror.class,
-			ScrollOfLullaby.class,
-			ScrollOfMagicalInfusion.class,
+			// ScrollOfRage.class,
+			// ScrollOfTerror.class,
+			// ScrollOfLullaby.class,
+			// ScrollOfMagicalInfusion.class,
 			ScrollOfPsionicBlast.class,
-			ScrollOfMirrorImage.class };
-		Category.SCROLL.probs = new float[]{ 30, 10, 20, 0, 15, 15, 12, 8, 8, 0, 4, 10 };
+			// ScrollOfMirrorImage.class
+		};
+		Category.SCROLL.probs = new float[]{30, 20, 0, 15, 4}; //{ 30, 10, 20, 0, 15, 15, 12, 8, 8, 0, 4, 10 };
 		
 		Category.POTION.classes = new Class<?>[]{
 			PotionOfHealing.class,
@@ -327,20 +329,22 @@ public class Generator {
 			Pasty.class,
 			MysteryMeat.class };
 		Category.FOOD.probs = new float[]{ 4, 1, 0 };
-			
+
+		// RingOfMight(유픽던에서는 지능의 반지)만 나오게 수정
 		Category.RING.classes = new Class<?>[]{
-			RingOfAccuracy.class,
-			RingOfEvasion.class,
-			RingOfElements.class,
-			RingOfForce.class,
-			RingOfFuror.class,
-			RingOfHaste.class,
-			RingOfMagic.class, //currently removed from drop tables, pending rework
+			// RingOfAccuracy.class,
+			// RingOfEvasion.class,
+			// RingOfElements.class,
+			// RingOfForce.class,
+			// RingOfFuror.class,
+			// RingOfHaste.class,
+			// RingOfMagic.class, //currently removed from drop tables, pending rework
 			RingOfMight.class,
-			RingOfSharpshooting.class,
-			RingOfTenacity.class,
-			RingOfWealth.class};
-		Category.RING.probs = new float[]{ 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1 };
+			// RingOfSharpshooting.class,
+			// RingOfTenacity.class,
+			// RingOfWealth.class
+		};
+		Category.RING.probs = new float[]{1}; // { 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1 };
 
 		Category.ARTIFACT.classes = new Class<?>[]{
 			CapeOfThorns.class,
@@ -372,7 +376,7 @@ public class Generator {
 			Dreamfoil.Seed.class,
 			Stormvine.Seed.class,
 			Starflower.Seed.class};
-		Category.SEED.probs = new float[]{ 12, 12, 12, 12, 12, 12, 12, 0, 4, 12, 12, 1 };
+		Category.SEED.probs = new float[]{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }; //{ 12, 12, 12, 12, 12, 12, 12, 0, 4, 12, 12, 1 };
 	}
 	
 	public static void reset() {

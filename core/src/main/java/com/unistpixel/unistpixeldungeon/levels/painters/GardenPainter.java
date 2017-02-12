@@ -40,6 +40,8 @@ public class GardenPainter extends Painter {
 		
 		room.entrance().set( Room.Door.Type.REGULAR );
 
+
+		/* Garden에서 씨앗나오던거 수정
 		if (Dungeon.isChallenged(Challenges.NO_FOOD)) {
 			if (Random.Int(2) == 0){
 				level.plant(new Sungrass.Seed(), level.pointToCell(room.random()));
@@ -60,6 +62,8 @@ public class GardenPainter extends Painter {
 				level.plant(new BlandfruitBush.Seed(), plant2);
 			}
 		}
+		*/
+
 		
 		Foliage light = (Foliage)level.blobs.get( Foliage.class );
 		if (light == null) {
