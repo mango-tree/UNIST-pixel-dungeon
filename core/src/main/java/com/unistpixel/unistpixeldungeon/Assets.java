@@ -42,11 +42,16 @@ public class Assets {
 	public static final String SHADOW   = "shadow.png";
 	public static final String BOSSHP   = "boss_hp.png";
 
-	public static final String WARRIOR	= "warrior.png";
+	// public static final String WARRIOR	= "warrior.png";
+	public static final String WARRIOR	= "UPD/unist_student.png";
+
 	public static final String MAGE		= "mage.png";
 	public static final String ROGUE	= "rogue.png";
 	public static final String HUNTRESS	= "ranger.png";
-	public static final String AVATARS	= "avatars.png";
+
+	// public static final String AVATARS	= "avatars.png";
+	public static final String AVATARS	= "UPD/select_student.png";
+
 	public static final String PET		= "pet.png";
 	
 	public static final String SURFACE	= "surface.png";
@@ -55,14 +60,19 @@ public class Assets {
 	public static final String SPECKS		= "specks.png";
 	public static final String EFFECTS		= "effects.png";
 	
-	public static final String RAT		= "rat.png";
+	// public static final String RAT		= "rat.png";
+	public static final String RAT		= "UPD/pre-unistar.png";
+
 	public static final String GNOLL	= "gnoll.png";
 	public static final String CRAB		= "crab.png";
 	public static final String GOO		= "goo.png";
 	public static final String SWARM	= "swarm.png";
 	public static final String SKELETON	= "skeleton.png";
 	public static final String SHAMAN	= "shaman.png";
-	public static final String THIEF	= "thief.png";
+
+	// public static final String THIEF	= "thief.png";
+	public static final String THIEF	= "UPD/gorani.png";
+
 	public static final String TENGU	= "tengu.png";
 	public static final String SHEEP	= "sheep.png";
 	public static final String KEEPER	= "shopkeeper.png";
@@ -97,7 +107,9 @@ public class Assets {
 	public static final String ROT_HEART= "rot_heart.png";
 	public static final String GUARD    = "guard.png";
 
-	public static final String ITEMS	        = "items.png";
+	// public static final String ITEMS	        = "items.png";
+	public static final String ITEMS	        = "UPD/new_items.png";
+
 	public static final String TERRAIN_FEATURES	= "terrain_features.png";
 	
 	public static final String TILES_SEWERS	= "tiles0.png";
