@@ -330,16 +330,16 @@ public class Generator {
 			MysteryMeat.class };
 		Category.FOOD.probs = new float[]{ 4, 1, 0 };
 
-		// RingOfMight(유픽던에서는 지능의 반지)만 나오게 수정
+		// RingOfForce(완력의 반지)만 나오게 수정
 		Category.RING.classes = new Class<?>[]{
 			// RingOfAccuracy.class,
 			// RingOfEvasion.class,
 			// RingOfElements.class,
-			// RingOfForce.class,
+			RingOfForce.class,
 			// RingOfFuror.class,
 			// RingOfHaste.class,
 			// RingOfMagic.class, //currently removed from drop tables, pending rework
-			RingOfMight.class,
+			// RingOfMight.class,
 			// RingOfSharpshooting.class,
 			// RingOfTenacity.class,
 			// RingOfWealth.class
