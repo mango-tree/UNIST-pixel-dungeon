@@ -106,20 +106,22 @@ public enum HeroClass {
 
 	private static void initWarrior( Hero hero ) {
 		(hero.belongings.weapon = new WornShortsword()).identify();
+		/* 시작 다트 삭제
 		Dart darts = new Dart( 8 );
 		darts.identify().collect();
+		*/
 
 		if ( Badges.isUnlocked(Badges.Badge.TUTORIAL_WARRIOR) ){
 			if (!Dungeon.isChallenged(Challenges.NO_ARMOR))
 				hero.belongings.armor.affixSeal(new BrokenSeal());
-			Dungeon.quickslot.setSlot(0, darts);
+			// Dungeon.quickslot.setSlot(0, darts); // 시작 다트 삭제
 		} else {
 			if (!Dungeon.isChallenged(Challenges.NO_ARMOR)) {
 				BrokenSeal seal = new BrokenSeal();
 				seal.collect();
 				Dungeon.quickslot.setSlot(0, seal);
 			}
-			Dungeon.quickslot.setSlot(1, darts);
+			// Dungeon.quickslot.setSlot(1, darts); // 시작 다트 삭제
 		}
 
 		new PotionOfHealing().setKnown();

@@ -230,17 +230,18 @@ public class Generator {
 		Category.POTION.classes = new Class<?>[]{
 			PotionOfHealing.class,
 			PotionOfExperience.class,
-			PotionOfToxicGas.class,
-			PotionOfParalyticGas.class,
+			// PotionOfToxicGas.class,
+			// PotionOfParalyticGas.class,
 			PotionOfLiquidFlame.class,
 			PotionOfLevitation.class,
 			PotionOfStrength.class,
 			PotionOfMindVision.class,
-			PotionOfPurity.class,
+			// PotionOfPurity.class,
 			PotionOfInvisibility.class,
 			PotionOfMight.class,
-			PotionOfFrost.class };
-		Category.POTION.probs = new float[]{ 45, 4, 15, 10, 15, 10, 0, 20, 12, 10, 0, 10 };
+			// PotionOfFrost.class
+		};
+		Category.POTION.probs = new float[]{ 45, 4, 15, 10, 0, 20, 10, 0 };
 
 		//TODO: add last ones when implemented
 		Category.WAND.classes = new Class<?>[]{
@@ -256,64 +257,67 @@ public class Generator {
 			//WandOfWarding.class,
 			WandOfTransfusion.class,
 			WandOfCorruption.class,
-			WandOfRegrowth.class };
-		Category.WAND.probs = new float[]{ 5, 4, 4, 4, 4, 3, /*3,*/ 3, 3, /*3,*/ 3, 3, 3 };
+			WandOfRegrowth.class
+			};
+		Category.WAND.probs = new float[]{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }; // { 5, 4, 4, 4, 4, 3, /*3,*/ 3, 3, /*3,*/ 3, 3, 3 };
 
 		//see generator.randomWeapon
 		Category.WEAPON.classes = new Class<?>[]{};
 		Category.WEAPON.probs = new float[]{};
 
 		Category.WEP_T1.classes = new Class<?>[]{
-			WornShortsword.class,
+			WornShortsword.class
+			/*
 			Knuckles.class,
 			Dagger.class,
 			MagesStaff.class,
 			Boomerang.class,
 			Dart.class
+			*/
 		};
-		Category.WEP_T1.probs = new float[]{ 1, 1, 1, 0, 0, 1 };
+		Category.WEP_T1.probs = new float[]{ 1 };
 
 		Category.WEP_T2.classes = new Class<?>[]{
 			NewShortsword.class,
 			HandAxe.class,
-			Spear.class,
+			// Spear.class,
 			Quarterstaff.class,
-			Dirk.class,
-			IncendiaryDart.class
+			// Dirk.class,
+			// IncendiaryDart.class
 		};
-		Category.WEP_T2.probs = new float[]{ 6, 5, 5, 4, 4, 6 };
+		Category.WEP_T2.probs = new float[]{ 6, 5, 4 };
 
 		Category.WEP_T3.classes = new Class<?>[]{
 			Sword.class,
 			Mace.class,
-			Scimitar.class,
+			// Scimitar.class,
 			RoundShield.class,
-			Sai.class,
-			Whip.class,
-			Shuriken.class,
-			CurareDart.class
+			// Sai.class,
+			// Whip.class,
+			// Shuriken.class,
+			// CurareDart.class
 		};
-		Category.WEP_T3.probs = new float[]{ 6, 5, 5, 4, 4, 4, 6, 6 };
+		Category.WEP_T3.probs = new float[]{ 6, 5, 4 };
 
 		Category.WEP_T4.classes = new Class<?>[]{
 			Longsword.class,
 			BattleAxe.class,
-			Flail.class,
-			RunicBlade.class,
-			AssassinsBlade.class,
-			Javelin.class
+			// Flail.class,
+			// RunicBlade.class,
+			// AssassinsBlade.class,
+			// Javelin.class
 		};
-		Category.WEP_T4.probs = new float[]{ 6, 5, 5, 4, 4, 6 };
+		Category.WEP_T4.probs = new float[]{ 6, 5 };
 
 		Category.WEP_T5.classes = new Class<?>[]{
-			Greatsword.class,
-			WarHammer.class,
-			Glaive.class,
-			Greataxe.class,
+			// Greatsword.class,
+			// WarHammer.class,
+			// Glaive.class,
+			// Greataxe.class,
 			Greatshield.class,
-			Tamahawk.class
+			// Tamahawk.class
 		};
-		Category.WEP_T5.probs = new float[]{ 6, 5, 5, 4, 4, 6 };
+		Category.WEP_T5.probs = new float[]{ 1 };
 
 		//see Generator.randomArmor
 		Category.ARMOR.classes = new Class<?>[]{
@@ -321,8 +325,9 @@ public class Generator {
 			LeatherArmor.class,
 			MailArmor.class,
 			ScaleArmor.class,
-			PlateArmor.class };
-		Category.ARMOR.probs = new float[]{ 0, 0, 0, 0, 0 };
+			// PlateArmor.class // PlateArmor 삭제
+		};
+		Category.ARMOR.probs = new float[]{ 0, 0, 0, 0 }; //{ 0, 0, 0, 0, 0 };
 		
 		Category.FOOD.classes = new Class<?>[]{
 			Food.class,
@@ -375,7 +380,8 @@ public class Generator {
 			BlandfruitBush.Seed.class,
 			Dreamfoil.Seed.class,
 			Stormvine.Seed.class,
-			Starflower.Seed.class};
+			Starflower.Seed.class
+		};
 		Category.SEED.probs = new float[]{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }; //{ 12, 12, 12, 12, 12, 12, 12, 0, 4, 12, 12, 1 };
 	}
 	
