@@ -60,7 +60,7 @@ public class Assets {
 	public static final String SPECKS		= "specks.png";
 	public static final String EFFECTS		= "effects.png";
 	
-	// public static final String RAT		= "rat.png";
+	public static final String REAL_RAT		= "rat.png";
 	public static final String RAT		= "UPD/pre-unistar.png";
 
 	public static final String GNOLL	= "gnoll.png";
