@@ -260,7 +260,8 @@ public class Ghost extends NPC {
 		}
 		
 		public static void spawn( SewerLevel level ) {
-			if (!spawned && Dungeon.depth > 1 && Random.Int( 5 - Dungeon.depth ) == 0) {
+			// 3층에서 놀 주술사만 나오게 함
+			if (!spawned && Dungeon.depth == 3) {
 				
 				Ghost ghost = new Ghost();
 				do {
