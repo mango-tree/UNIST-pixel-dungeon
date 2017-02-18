@@ -484,6 +484,8 @@ public class Generator {
 	//enforces uniqueness of artifacts throughout a run.
 	public static Artifact randomArtifact() {
 
+		return null;
+		/* 아티팩트 삭제
 		try {
 			Category cat = Category.ARTIFACT;
 			int i = Random.chances( cat.probs );
@@ -507,6 +509,7 @@ public class Generator {
 			UNISTPixelDungeon.reportException(e);
 			return null;
 		}
+		*/
 	}
 
 	public static boolean removeArtifact(Artifact artifact) {
