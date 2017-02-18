@@ -51,9 +51,9 @@ public class LaboratoryPainter extends Painter {
 		} else if (entrance.y == room.bottom) {
 			pot = new Point( Random.Int( 2 ) == 0 ? room.left + 1 : room.right - 1, room.top+1 );
 		}
+		/* Alchemy(연금술 솥) 삭제
 		set( level, pot, Terrain.ALCHEMY );
 
-		/* Alchemy(연금술 솥) 삭제
 		Alchemy alchemy = new Alchemy();
 		alchemy.seed( level, pot.x + level.width() * pot.y, 1 );
 		level.blobs.put( Alchemy.class, alchemy );
