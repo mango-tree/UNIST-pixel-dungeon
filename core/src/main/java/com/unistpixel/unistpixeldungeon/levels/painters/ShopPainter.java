@@ -129,9 +129,11 @@ public class ShopPainter extends Painter {
 		switch (Dungeon.depth) {
 		case 6:
 			itemsToSpawn.add( (Random.Int( 2 ) == 0 ? new NewShortsword().identify() : new HandAxe()).identify() );
+			/* 상점에서 다트 안나오게 함
 			itemsToSpawn.add( Random.Int( 2 ) == 0 ?
 					new IncendiaryDart().quantity(Random.NormalIntRange(2, 4)) :
 					new CurareDart().quantity(Random.NormalIntRange(1, 3)));
+			*/
 			itemsToSpawn.add( new LeatherArmor().identify() );
 			break;
 			
@@ -231,7 +233,9 @@ public class ShopPainter extends Painter {
 			}
 		}
 
-		Item rare;
+		Item rare = Generator.random(Generator.Category.RING);
+		rare.level( 1 );
+		/* 반지만 나오게 설정
 		switch (Random.Int(10)){
 			case 0:
 				rare = Generator.random( Generator.Category.WAND );
@@ -247,6 +251,7 @@ public class ShopPainter extends Painter {
 			default:
 				rare = new Stylus();
 		}
+		*/
 		rare.cursed = rare.cursedKnown = false;
 		itemsToSpawn.add( rare );
 
@@ -275,6 +280,7 @@ public class ShopPainter extends Painter {
 
 		//then pick whichever valid bag has the most items available to put into it.
 		//note that the order here gives a perference if counts are otherwise equal
+		/*
 		if (seeds >= scrolls && seeds >= potions && seeds >= wands && !Dungeon.limitedDrops.seedBag.dropped()) {
 			Dungeon.limitedDrops.seedBag.drop();
 			itemsToSpawn.add( new SeedPouch() );
@@ -291,6 +297,12 @@ public class ShopPainter extends Painter {
 			Dungeon.limitedDrops.wandBag.drop();
 			itemsToSpawn.add(new WandHolster());
 		}
+		*/
+		// 무조건 scrollBag하고 potionBag 생기게 함
+		Dungeon.limitedDrops.scrollBag.drop();
+		itemsToSpawn.add( new ScrollHolder() );
+		Dungeon.limitedDrops.potionBag.drop();
+		itemsToSpawn.add( new PotionBandolier() );
 	}
 
 	public static int spaceNeeded(){
