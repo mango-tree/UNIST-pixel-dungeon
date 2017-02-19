@@ -31,6 +31,7 @@ import com.unistpixel.unistpixeldungeon.actors.buffs.Poison;
 import com.unistpixel.unistpixeldungeon.actors.hero.HeroSubClass;
 import com.unistpixel.unistpixeldungeon.effects.CellEmitter;
 import com.unistpixel.unistpixeldungeon.effects.Speck;
+import com.unistpixel.unistpixeldungeon.items.Amulet;
 import com.unistpixel.unistpixeldungeon.items.TomeOfMastery;
 import com.unistpixel.unistpixeldungeon.items.artifacts.LloydsBeacon;
 import com.unistpixel.unistpixeldungeon.items.scrolls.ScrollOfMagicMapping;
@@ -130,15 +131,20 @@ public class Tengu extends Mob {
 
 	@Override
 	public void die( Object cause ) {
-		
+
+		/* TomeOfMastery 삭제
 		if (Dungeon.hero.subClass == HeroSubClass.NONE) {
 			Dungeon.level.drop( new TomeOfMastery(), pos ).sprite.drop();
 		}
+		*/
 		
 		GameScene.bossSlain();
 		super.die( cause );
 		
 		Badges.validateBossSlain();
+
+		// 죽으면 아뮬렛 드랍
+		Dungeon.level.drop( new Amulet(), pos ).sprite.drop();
 
 		LloydsBeacon beacon = Dungeon.hero.belongings.getItem(LloydsBeacon.class);
 		if (beacon != null) {

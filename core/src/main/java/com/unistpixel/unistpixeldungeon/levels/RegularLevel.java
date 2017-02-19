@@ -230,11 +230,15 @@ public abstract class RegularLevel extends Level {
 						
 						r.type = Type.LABORATORY;
 						
-					} else if (Dungeon.depth >= Dungeon.transmutation && specials.contains( Type.MAGIC_WELL )) {
+					}
+					/* MAGIC_WELL 삭제
+					else if (Dungeon.depth >= Dungeon.transmutation && specials.contains( Type.MAGIC_WELL )) {
 						
 						r.type = Type.MAGIC_WELL;
 						
-					} else {
+					}
+					*/
+					else {
 						
 						int n = specials.size();
 						r.type = specials.get( Math.min( Random.Int( n ), Random.Int( n ) ) );

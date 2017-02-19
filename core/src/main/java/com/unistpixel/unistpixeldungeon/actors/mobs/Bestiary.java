@@ -39,7 +39,8 @@ public class Bestiary {
 	public static Mob mutable( int depth ) {
 		@SuppressWarnings("unchecked")
 		Class<? extends Mob> cl = (Class<? extends Mob>)mobClass( depth );
-		
+
+		/* 돌연변이 삭제
 		if (Random.Int( 30 ) == 0) {
 			if (cl == Rat.class) {
 				cl = Albino.class;
@@ -53,6 +54,7 @@ public class Bestiary {
 				cl = Acidic.class;
 			}
 		}
+		*/
 		
 		try {
 			return cl.newInstance();
