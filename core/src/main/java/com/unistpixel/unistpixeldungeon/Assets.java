@@ -63,20 +63,30 @@ public class Assets {
 	public static final String REAL_RAT		= "rat.png";
 	public static final String RAT		= "UPD/pre-unistar.png";
 
-	public static final String GNOLL	= "gnoll.png";
-	public static final String CRAB		= "crab.png";
-	public static final String GOO		= "goo.png";
+	// public static final String GNOLL	= "gnoll.png";
+	public static final String GNOLL	= "UPD/new_report.png";
+
+	// public static final String CRAB		= "crab.png";
+	public static final String CRAB		= "UPD/new_mymathlab.png";
+
+	// public static final String GOO		= "goo.png";
+	public static final String GOO		= "UPD/new_midterm.png";
 
 	// public static final String SWARM	= "swarm.png";
 	public static final String SWARM	= "UPD/keyterm.png";
 
-	public static final String SKELETON	= "skeleton.png";
-	public static final String SHAMAN	= "shaman.png";
+	// public static final String SKELETON	= "skeleton.png";
+	public static final String SKELETON	= "UPD/new_presentaion.png";
+
+	// public static final String SHAMAN	= "shaman.png";
+	public static final String SHAMAN	= "UPD/new_TA.png";
 
 	// public static final String THIEF	= "thief.png";
 	public static final String THIEF	= "UPD/gorani.png";
 
-	public static final String TENGU	= "tengu.png";
+	// public static final String TENGU	= "tengu.png";
+	public static final String TENGU	= "UPD/new_final_professor.png";
+
 	public static final String SHEEP	= "sheep.png";
 
 	// public static final String KEEPER	= "shopkeeper.png";
@@ -94,7 +104,10 @@ public class Assets {
 	public static final String UNDEAD	= "undead.png";
 	public static final String KING		= "king.png";
 	public static final String STATUE	= "statue.png";
-	public static final String PIRANHA	= "piranha.png";
+
+	// public static final String PIRANHA	= "piranha.png";
+	public static final String PIRANHA	= "UPD/new_ori.png";
+
 	public static final String EYE		= "eye.png";
 	public static final String SUCCUBUS	= "succubus.png";
 	public static final String SCORPIO	= "scorpio.png";
