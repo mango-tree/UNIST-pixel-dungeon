@@ -335,21 +335,21 @@ public class Generator {
 			MysteryMeat.class };
 		Category.FOOD.probs = new float[]{ 4, 1, 0 };
 
-		// RingOfForce(완력의 반지)만 나오게 수정
+		// 힘반지, 부유함반지, 저격반지 대신 완력의 반지가 나오게 수정
 		Category.RING.classes = new Class<?>[]{
-			// RingOfAccuracy.class,
-			// RingOfEvasion.class,
-			// RingOfElements.class,
+			RingOfAccuracy.class,
+			RingOfEvasion.class,
+			RingOfElements.class,
 			RingOfForce.class,
-			// RingOfFuror.class,
-			// RingOfHaste.class,
+			RingOfFuror.class,
+			RingOfHaste.class,
 			// RingOfMagic.class, //currently removed from drop tables, pending rework
 			// RingOfMight.class,
 			// RingOfSharpshooting.class,
-			// RingOfTenacity.class,
+			RingOfTenacity.class,
 			// RingOfWealth.class
 		};
-		Category.RING.probs = new float[]{1}; // { 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1 };
+		Category.RING.probs = new float[]{1, 1, 1, 4, 1, 1, 1}; // { 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1 };
 
 		Category.ARTIFACT.classes = new Class<?>[]{
 			CapeOfThorns.class,
