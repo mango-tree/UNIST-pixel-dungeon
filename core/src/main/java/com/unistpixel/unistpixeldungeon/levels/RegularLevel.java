@@ -204,6 +204,11 @@ public abstract class RegularLevel extends Level {
 		int specialRooms = 0;
 		boolean pitMade = false;
 
+		if( Dungeon.depth != 2 )
+		{
+			specials.remove( Type.POOL );
+		}
+
 		for (Room r : rooms) {
 			if (r.type == Type.NULL &&
 				r.connected.size() == 1) {
@@ -212,7 +217,11 @@ public abstract class RegularLevel extends Level {
 					r.width() > 3 && r.height() > 3 &&
 					Random.Int( specialRooms * specialRooms + 2 ) == 0) {
 
-					if (pitRoomNeeded && !pitMade) {
+					if( Dungeon.depth == 2 && specials.contains( Type.POOL ))
+					{
+						r.type = Type.POOL;
+					}
+					else if (pitRoomNeeded && !pitMade) {
 
 						r.type = Type.PIT;
 						pitMade = true;
