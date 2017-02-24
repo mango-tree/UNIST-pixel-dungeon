@@ -34,7 +34,7 @@ public enum Icons {
 	WARNING,
 	TARGET,
 	MASTERY,
-	WATA,
+	UPD,
 	SHPX,
 	WARRIOR,
 	MAGE,
@@ -90,8 +90,8 @@ public enum Icons {
 		case MASTERY:
 			icon.frame( icon.texture.uvRect( 16, 14, 30, 28 ) );
 			break;
-		case WATA:
-			icon.frame( icon.texture.uvRect( 30, 16, 45, 26 ) );
+		case UPD:
+			icon.frame( icon.texture.uvRect( 139, 5, 174, 46 ) );// ( 30, 16, 45, 26 ) );
 			break;
 		case SHPX:
 			icon.frame( icon.texture.uvRect( 64, 44, 80, 60 ) );
