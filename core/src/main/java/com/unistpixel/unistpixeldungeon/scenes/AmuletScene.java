@@ -68,7 +68,8 @@ public class AmuletScene extends PixelScene {
 		};
 		btnExit.setSize( WIDTH, BTN_HEIGHT );
 		add( btnExit );
-		
+
+		/* btnStay 삭제
 		RedButton btnStay = new RedButton( Messages.get(this, "stay") ) {
 			@Override
 			protected void onClick() {
@@ -77,20 +78,21 @@ public class AmuletScene extends PixelScene {
 		};
 		btnStay.setSize( WIDTH, BTN_HEIGHT );
 		add( btnStay );
+		*/
 		
 		float height;
 		if (noText) {
-			height = amulet.height + LARGE_GAP + btnExit.height() + SMALL_GAP + btnStay.height();
+			height = amulet.height + LARGE_GAP + btnExit.height() + SMALL_GAP; // + btnStay.height();
 			
 			amulet.x = (Camera.main.width - amulet.width) / 2;
 			amulet.y = (Camera.main.height - height) / 2;
 			align(amulet);
 
 			btnExit.setPos( (Camera.main.width - btnExit.width()) / 2, amulet.y + amulet.height + LARGE_GAP );
-			btnStay.setPos( btnExit.left(), btnExit.bottom() + SMALL_GAP );
+			// btnStay.setPos( btnExit.left(), btnExit.bottom() + SMALL_GAP );
 			
 		} else {
-			height = amulet.height + LARGE_GAP + text.height() + LARGE_GAP + btnExit.height() + SMALL_GAP + btnStay.height();
+			height = amulet.height + LARGE_GAP + text.height() + LARGE_GAP + btnExit.height() + SMALL_GAP; // + btnStay.height();
 			
 			amulet.x = (Camera.main.width - amulet.width) / 2;
 			amulet.y = (Camera.main.height - height) / 2;
@@ -100,7 +102,7 @@ public class AmuletScene extends PixelScene {
 			align(text);
 			
 			btnExit.setPos( (Camera.main.width - btnExit.width()) / 2, text.top() + text.height() + LARGE_GAP );
-			btnStay.setPos( btnExit.left(), btnExit.bottom() + SMALL_GAP );
+			// btnStay.setPos( btnExit.left(), btnExit.bottom() + SMALL_GAP );
 		}
 
 		new Flare( 8, 48 ).color( 0xFFDDBB, true ).show( amulet, 0 ).angularSpeed = +30;

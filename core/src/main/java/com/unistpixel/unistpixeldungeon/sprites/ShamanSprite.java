@@ -32,21 +32,21 @@ public class ShamanSprite extends MobSprite {
 		
 		texture( Assets.SHAMAN );
 		
-		TextureFilm frames = new TextureFilm( texture, 12, 15 );
+		TextureFilm frames = new TextureFilm( texture, 16, 16 );
 		
 		idle = new Animation( 2, true );
-		idle.frames( frames, 0, 0, 0, 1, 0, 0, 1, 1 );
+		idle.frames( frames, 0, 1, 2, 3, 4 );
 		
 		run = new Animation( 12, true );
-		run.frames( frames, 4, 5, 6, 7 );
+		run.frames( frames, 5, 6, 7, 8, 9, 10 );
 		
-		attack = new Animation( 12, false );
-		attack.frames( frames, 2, 3, 0 );
+		attack = new Animation( 15, false );
+		attack.frames( frames, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 );
 		
 		zap = attack.clone();
 		
 		die = new Animation( 12, false );
-		die.frames( frames, 8, 9, 10 );
+		die.frames( frames, 21, 22, 23, 24 );
 		
 		play( idle );
 	}

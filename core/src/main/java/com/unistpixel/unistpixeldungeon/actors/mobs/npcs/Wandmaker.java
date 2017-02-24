@@ -30,6 +30,7 @@ import com.unistpixel.unistpixeldungeon.items.Item;
 import com.unistpixel.unistpixeldungeon.items.quest.CeremonialCandle;
 import com.unistpixel.unistpixeldungeon.items.quest.CorpseDust;
 import com.unistpixel.unistpixeldungeon.items.quest.Embers;
+import com.unistpixel.unistpixeldungeon.items.rings.Ring;
 import com.unistpixel.unistpixeldungeon.items.wands.Wand;
 import com.unistpixel.unistpixeldungeon.levels.PrisonLevel;
 import com.unistpixel.unistpixeldungeon.levels.Room;
@@ -177,8 +178,8 @@ public class Wandmaker extends NPC {
 		
 		private static boolean given;
 		
-		public static Wand wand1;
-		public static Wand wand2;
+		public static Ring wand1;
+		public static Ring wand2;
 		
 		public static void reset() {
 			spawned = false;
@@ -237,8 +238,8 @@ public class Wandmaker extends NPC {
 				
 				given = node.getBoolean( GIVEN );
 				
-				wand1 = (Wand)node.get( WAND1 );
-				wand2 = (Wand)node.get( WAND2 );
+				wand1 = (Ring)node.get( WAND1 );
+				wand2 = (Ring)node.get( WAND2 );
 
 				if (type == 2){
 					CeremonialCandle.ritualPos = node.getInt( RITUALPOS );
@@ -250,11 +251,12 @@ public class Wandmaker extends NPC {
 		}
 		
 		public static boolean spawn( PrisonLevel level, Room room, Collection<Room> rooms ) {
-			// WandMaker 삭제
-			if ( false ) {
+			// WandMaker -> 만취한 선배로 수정
+			if ( !spawned && Dungeon.depth == 8 ) {
 				// decide between 1,2, or 3 for quest type.
 				// but if the no herbalism challenge is enabled, only pick 1 or 2, no rotberry.
-				if (type == 0) type = Random.Int(Dungeon.isChallenged(Challenges.NO_HERBALISM) ? 2 : 3)+1;
+				// if (type == 0) type = Random.Int(Dungeon.isChallenged(Challenges.NO_HERBALISM) ? 2 : 3)+1;
+				type = 2; // 퀘스트 종류는 불정령으로 고정
 
 				//note that we set the type but can fail here. This ensures that if a level needs to be re-generated
 				//we don't re-roll the quest, it will try to assign itself to that new level with the same type.
@@ -270,13 +272,13 @@ public class Wandmaker extends NPC {
 					spawned = true;
 
 					given = false;
-					wand1 = (Wand) Generator.random(Generator.Category.WAND);
+					wand1 = (Ring) Generator.random(Generator.Category.RING);
 					wand1.cursed = false;
 					wand1.identify();
 					wand1.upgrade();
 
 					do {
-						wand2 = (Wand) Generator.random(Generator.Category.WAND);
+						wand2 = (Ring) Generator.random(Generator.Category.RING);
 					} while (wand2.getClass().equals(wand1.getClass()));
 					wand2.cursed = false;
 					wand2.identify();

@@ -127,7 +127,7 @@ public class SewerBossLevel extends RegularLevel {
 				//look at rooms adjacent to the final found room (likely to be furthest from start)
 				ArrayList<Room> candidates = new ArrayList<Room>();
 				for (Room r : lastRoom.neigbours) {
-					if (r.type == Type.NULL && r.connected.size() == 0 && !r.neigbours.contains(roomEntrance)) {
+					if (r.type == Type.NULL &&  r.connected.size() == 0 && r.neigbours.contains(roomEntrance)) { //(r.type == Type.NULL && r.connected.size() == 0 && !r.neigbours.contains(roomEntrance)) {
 						candidates.add(r);
 					}
 				}
@@ -135,12 +135,13 @@ public class SewerBossLevel extends RegularLevel {
 				//if we have candidates, pick a room and put the king there
 				if (candidates.size() > 0) {
 					Room kingsRoom = Random.element(candidates);
-					kingsRoom.connect(lastRoom);
+					kingsRoom.connect(roomEntrance);
 					kingsRoom.type = Room.Type.RAT_KING;
 
 				//unacceptable! make a new level...
 				} else {
-					return false;
+					// return false;
+					i = -1;
 				}
 			}
 			lastRoom = curRoom;

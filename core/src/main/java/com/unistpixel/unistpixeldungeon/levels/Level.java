@@ -197,11 +197,14 @@ public abstract class Level implements Bundlable {
 
 			int bonus = RingOfWealth.getBonus(Dungeon.hero, RingOfWealth.Wealth.class);
 
-			if (Dungeon.posNeeded()) {
+			// 매 층마다 총명탕 하나씩 무조건 나오게 수정
+			if (true){  //(Dungeon.posNeeded()) {
+				/*
 				if (Random.Float() > Math.pow(0.925, bonus))
 					addItemToSpawn( new PotionOfMight() );
 				else
-					addItemToSpawn( new PotionOfStrength() );
+				*/
+				addItemToSpawn( new PotionOfStrength() );
 				Dungeon.limitedDrops.strengthPotions.count++;
 			}
 			if (Dungeon.souNeeded()) {

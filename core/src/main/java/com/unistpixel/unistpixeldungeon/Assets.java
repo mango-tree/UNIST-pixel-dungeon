@@ -32,7 +32,7 @@ public class Assets {
 	public static final String AMULET	= "amulet.png";
 	
 	public static final String CHROME	= "chrome.png";
-	public static final String ICONS	= "icons.png";
+	public static final String ICONS	= "UPD/new_icons.png";
 	public static final String STATUS	= "status_pane.png";
 	public static final String MENU		= "menu_button.png";
 	public static final String HP_BAR	= "hp_bar.png";
@@ -63,19 +63,35 @@ public class Assets {
 	public static final String REAL_RAT		= "rat.png";
 	public static final String RAT		= "UPD/pre-unistar.png";
 
-	public static final String GNOLL	= "gnoll.png";
-	public static final String CRAB		= "crab.png";
-	public static final String GOO		= "goo.png";
-	public static final String SWARM	= "swarm.png";
-	public static final String SKELETON	= "skeleton.png";
-	public static final String SHAMAN	= "shaman.png";
+	// public static final String GNOLL	= "gnoll.png";
+	public static final String GNOLL	= "UPD/new_report.png";
+
+	// public static final String CRAB		= "crab.png";
+	public static final String CRAB		= "UPD/new_mymathlab.png";
+
+	// public static final String GOO		= "goo.png";
+	public static final String GOO		= "UPD/new_midterm.png";
+
+	// public static final String SWARM	= "swarm.png";
+	public static final String SWARM	= "UPD/keyterm.png";
+
+	// public static final String SKELETON	= "skeleton.png";
+	public static final String SKELETON	= "UPD/new_presentaion.png";
+
+	// public static final String SHAMAN	= "shaman.png";
+	public static final String SHAMAN	= "UPD/new_TA.png";
 
 	// public static final String THIEF	= "thief.png";
 	public static final String THIEF	= "UPD/gorani.png";
 
-	public static final String TENGU	= "tengu.png";
+	// public static final String TENGU	= "tengu.png";
+	public static final String TENGU	= "UPD/new_final_professor.png";
+
 	public static final String SHEEP	= "sheep.png";
-	public static final String KEEPER	= "shopkeeper.png";
+
+	// public static final String KEEPER	= "shopkeeper.png";
+	public static final String KEEPER	= "UPD/new_shopkeeper.png";
+
 	public static final String BAT		= "bat.png";
 	public static final String BRUTE	= "brute.png";
 	public static final String SPINNER	= "spinner.png";
@@ -88,7 +104,10 @@ public class Assets {
 	public static final String UNDEAD	= "undead.png";
 	public static final String KING		= "king.png";
 	public static final String STATUE	= "statue.png";
-	public static final String PIRANHA	= "piranha.png";
+
+	// public static final String PIRANHA	= "piranha.png";
+	public static final String PIRANHA	= "UPD/new_ori.png";
+
 	public static final String EYE		= "eye.png";
 	public static final String SUCCUBUS	= "succubus.png";
 	public static final String SCORPIO	= "scorpio.png";
@@ -97,23 +116,35 @@ public class Assets {
 	public static final String YOG		= "yog.png";
 	public static final String LARVA	= "larva.png";
 	public static final String GHOST	= "ghost.png";
-	public static final String MAKER	= "wandmaker.png";
+
+	// public static final String MAKER	= "wandmaker.png";
+	public static final String MAKER	= "UPD/new_drunken.png";
+
 	public static final String TROLL	= "blacksmith.png";
 	public static final String IMP		= "demon.png";
-	public static final String RATKING	= "ratking.png";
+
+	// public static final String RATKING	= "ratking.png";
+	public static final String RATKING	= "UPD/hexa_master.png";
+
 	public static final String BEE      = "bee.png";
 	public static final String MIMIC    = "mimic.png";
 	public static final String ROT_LASH = "rot_lasher.png";
 	public static final String ROT_HEART= "rot_heart.png";
-	public static final String GUARD    = "guard.png";
+
+	// public static final String GUARD    = "guard.png";
+	public static final String GUARD    = "UPD/groupmeeting.png";
 
 	// public static final String ITEMS	        = "items.png";
 	public static final String ITEMS	        = "UPD/new_items.png";
 
 	public static final String TERRAIN_FEATURES	= "terrain_features.png";
 	
-	public static final String TILES_SEWERS	= "tiles0.png";
-	public static final String TILES_PRISON	= "tiles1.png";
+	// public static final String TILES_SEWERS	= "tiles0.png";
+	public static final String TILES_SEWERS	= "UPD/new_map1.png";
+
+	// public static final String TILES_PRISON	= "tiles1.png";
+	public static final String TILES_PRISON	= "UPD/new_map2.png";
+
 	public static final String TILES_CAVES	= "tiles2.png";
 	public static final String TILES_CITY	= "tiles3.png";
 	public static final String TILES_HALLS	= "tiles4.png";

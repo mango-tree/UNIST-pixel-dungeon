@@ -23,6 +23,7 @@ package com.unistpixel.unistpixeldungeon.levels.painters;
 import com.unistpixel.unistpixeldungeon.Dungeon;
 import com.unistpixel.unistpixeldungeon.actors.mobs.Piranha;
 import com.unistpixel.unistpixeldungeon.items.Generator;
+import com.unistpixel.unistpixeldungeon.items.Gold;
 import com.unistpixel.unistpixeldungeon.items.Heap;
 import com.unistpixel.unistpixeldungeon.items.Item;
 import com.unistpixel.unistpixeldungeon.items.potions.PotionOfInvisibility;
@@ -69,8 +70,7 @@ public class PoolPainter extends Painter {
 		}
 		
 		int pos = x + y * level.width();
-		level.drop( prize( level ), pos ).type =
-			Random.Int( 3 ) == 0 ? Heap.Type.CHEST : Heap.Type.HEAP;
+		level.drop( prize( level ), pos ).type = Heap.Type.CHEST; //Random.Int( 3 ) == 0 ? Heap.Type.CHEST : Heap.Type.HEAP;
 		set( level, pos, Terrain.PEDESTAL );
 		
 		level.addItemToSpawn( new PotionOfInvisibility() );
@@ -87,7 +87,9 @@ public class PoolPainter extends Painter {
 	private static Item prize( Level level ) {
 
 		Item prize;
-
+		prize = new Gold( 314 );
+		return prize;
+		/* 보물상자 안에는 골드 314만 들어가게 수정
 		if (Random.Int(3) == 0){
 			prize = level.findPrizeItem();
 			if (prize != null)
@@ -109,5 +111,6 @@ public class PoolPainter extends Painter {
 		}
 
 		return prize;
+		*/
 	}
 }

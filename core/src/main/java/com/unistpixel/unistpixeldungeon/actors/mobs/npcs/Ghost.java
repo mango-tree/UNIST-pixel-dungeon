@@ -288,13 +288,16 @@ public class Ghost extends NPC {
 				} else if (itemTierRoll < 0.8f) {
 					wepTier = 3;
 					armor = new MailArmor();
-				} else if (itemTierRoll < 0.95f) {
+				} else  { //if (itemTierRoll < 0.95f)
 					wepTier = 4;
 					armor = new ScaleArmor();
-				} else {
+				}
+				/* 보상으로 플레이트 아머 안나오게 함
+				else {
 					wepTier = 5;
 					armor = new PlateArmor();
 				}
+				*/
 
 				try {
 					do {

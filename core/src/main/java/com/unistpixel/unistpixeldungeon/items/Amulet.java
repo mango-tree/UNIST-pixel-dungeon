@@ -56,7 +56,7 @@ public class Amulet extends Item {
 		super.execute( hero, action );
 
 		if (action.equals(AC_END)) {
-			showAmuletScene( false );
+			showAmuletScene( true ); // 대사 나오게 수정
 		}
 	}
 	

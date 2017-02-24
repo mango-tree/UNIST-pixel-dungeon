@@ -30,19 +30,19 @@ public class GnollSprite extends MobSprite {
 		
 		texture( Assets.GNOLL );
 		
-		TextureFilm frames = new TextureFilm( texture, 12, 15 );
+		TextureFilm frames = new TextureFilm( texture, 16, 16 );
 		
 		idle = new Animation( 2, true );
-		idle.frames( frames, 0, 0, 0, 1, 0, 0, 1, 1 );
+		idle.frames( frames, 0, 1, 2 );
 		
-		run = new Animation( 12, true );
-		run.frames( frames, 4, 5, 6, 7 );
+		run = new Animation( 10, true );
+		run.frames( frames, 3, 4, 5 );
 		
 		attack = new Animation( 12, false );
-		attack.frames( frames, 2, 3, 0 );
+		attack.frames( frames,  6, 7, 8, 9, 10 );
 		
 		die = new Animation( 12, false );
-		die.frames( frames, 8, 9, 10 );
+		die.frames( frames, 11, 12, 13, 14 );
 		
 		play( idle );
 	}

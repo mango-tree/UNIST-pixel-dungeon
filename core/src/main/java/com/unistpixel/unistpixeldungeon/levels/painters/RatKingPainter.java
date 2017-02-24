@@ -37,7 +37,7 @@ public class RatKingPainter extends Painter {
 		fill( level, room, 1, Terrain.EMPTY_SP );
 		
 		Room.Door entrance = room.entrance();
-		entrance.set( Room.Door.Type.HIDDEN );
+		entrance.type = Room.Door.Type.EMPTY;
 		int door = entrance.x + entrance.y * level.width();
 		
 		for (int i=room.left + 1; i < room.right; i++) {

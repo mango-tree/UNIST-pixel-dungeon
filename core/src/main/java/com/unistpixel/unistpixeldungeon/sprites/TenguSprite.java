@@ -48,7 +48,7 @@ public class TenguSprite extends MobSprite {
 		run.frames( frames, 2, 3, 4, 5, 0 );
 		
 		attack = new Animation( 15, false );
-		attack.frames( frames, 6, 7, 7, 0 );
+		attack.frames( frames, 6, 7, 8, 0 );
 		
 		cast = attack.clone();
 		
