@@ -63,10 +63,10 @@ public class Assets {
 	public static final String EFFECTS		= "effects.png";
 	
 	public static final String REAL_RAT		= "rat.png";
-	public static final String RAT		= "UPD/pre-unistar.png";
+	public static final String RAT		= "UPD/new_preunistar.png";
 
 	// public static final String GNOLL	= "gnoll.png";
-	public static final String GNOLL	= "UPD/new_report.png";
+	public static final String GNOLL	= "UPD/new_reports.png";
 
 	// public static final String CRAB		= "crab.png";
 	public static final String CRAB		= "UPD/new_mymathlab.png";
