@@ -116,7 +116,10 @@ public class Assets {
 	public static final String YOG		= "yog.png";
 	public static final String LARVA	= "larva.png";
 	public static final String GHOST	= "ghost.png";
-	public static final String MAKER	= "wandmaker.png";
+
+	// public static final String MAKER	= "wandmaker.png";
+	public static final String MAKER	= "UPD/new_drunken.png";
+
 	public static final String TROLL	= "blacksmith.png";
 	public static final String IMP		= "demon.png";
 

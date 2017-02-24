@@ -25,6 +25,7 @@ import com.unistpixel.unistpixeldungeon.actors.mobs.npcs.Wandmaker;
 import com.unistpixel.unistpixeldungeon.items.Item;
 import com.unistpixel.unistpixeldungeon.items.quest.CorpseDust;
 import com.unistpixel.unistpixeldungeon.items.quest.Embers;
+import com.unistpixel.unistpixeldungeon.items.rings.Ring;
 import com.unistpixel.unistpixeldungeon.items.wands.Wand;
 import com.unistpixel.unistpixeldungeon.messages.Messages;
 import com.unistpixel.unistpixeldungeon.plants.Rotberry;
@@ -86,7 +87,7 @@ public class WndWandmaker extends Window {
 		resize(WIDTH, (int) btnWand2.bottom());
 	}
 	
-	private void selectReward( Wandmaker wandmaker, Item item, Wand reward ) {
+	private void selectReward( Wandmaker wandmaker, Item item, Ring reward ) {
 		
 		hide();
 		
