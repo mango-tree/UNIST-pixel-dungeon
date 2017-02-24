@@ -168,7 +168,9 @@ public class Assets {
 	public static final String FONT1X       = "font1x.png";
 	public static final String FONT2X       = "font2x.png";
 	
-	public static final String THEME	= "theme.ogg";
+	// public static final String THEME	= "theme.ogg";
+	public static final String THEME	= "UPD/Theme.ogg";
+
 	public static final String TUNE		= "game.ogg";
 	public static final String HAPPY	= "surface.ogg";
 	
@@ -185,15 +187,23 @@ public class Assets {
 	public static final String SND_STEP		= "snd_step.mp3";
 	public static final String SND_WATER	= "snd_water.mp3";
 	public static final String SND_DESCEND	= "snd_descend.mp3";
-	public static final String SND_EAT		= "snd_eat.mp3";
-	public static final String SND_READ		= "snd_read.mp3";
+
+	// public static final String SND_EAT		= "snd_eat.mp3";
+	public static final String SND_EAT		= "UPD/snd_eat.mp3";
+
+	// public static final String SND_READ		= "snd_read.mp3";
+	public static final String SND_READ		= "UPD/snd_read.mp3";
+
 	public static final String SND_LULLABY	= "snd_lullaby.mp3";
 	public static final String SND_DRINK	= "snd_drink.mp3";
 	public static final String SND_SHATTER	= "snd_shatter.mp3";
 	public static final String SND_ZAP		= "snd_zap.mp3";
 	public static final String SND_LIGHTNING= "snd_lightning.mp3";
 	public static final String SND_LEVELUP	= "snd_levelup.mp3";
-	public static final String SND_DEATH	= "snd_death.mp3";
+
+	// public static final String SND_DEATH	= "snd_death.mp3";
+	public static final String SND_DEATH	= "UPD/snd_death.mp3";
+
 	public static final String SND_CHALLENGE= "snd_challenge.mp3";
 	public static final String SND_CURSED	= "snd_cursed.mp3";
 	public static final String SND_TRAP		= "snd_trap.mp3";
