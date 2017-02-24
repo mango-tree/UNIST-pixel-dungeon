@@ -52,6 +52,8 @@ import com.watabou.utils.Random;
 
 import java.util.HashSet;
 
+import static com.unistpixel.unistpixeldungeon.Dungeon.hero;
+
 public class Tengu extends Mob {
 	
 	{
@@ -97,7 +99,7 @@ public class Tengu extends Mob {
 		super.damage(dmg, src);
 		dmg = beforeHitHP - HP;
 
-		LockedFloor lock = Dungeon.hero.buff(LockedFloor.class);
+		LockedFloor lock = hero.buff(LockedFloor.class);
 		if (lock != null) {
 			int multiple = beforeHitHP > HT/2 ? 1 : 4;
 			lock.addTime(dmg*multiple);
@@ -143,15 +145,16 @@ public class Tengu extends Mob {
 		
 		Badges.validateBossSlain();
 
-		// 죽으면 아뮬렛 드랍
-		Dungeon.level.drop( new Amulet(), pos ).sprite.drop();
-
-		LloydsBeacon beacon = Dungeon.hero.belongings.getItem(LloydsBeacon.class);
+		LloydsBeacon beacon = hero.belongings.getItem(LloydsBeacon.class);
 		if (beacon != null) {
 			beacon.upgrade();
 		}
 		
 		yell( Messages.get(this, "defeated") );
+
+		// 죽으면 바로 아뮬렛 발동시킨 화면 나오게 수정
+		Amulet end = new Amulet();
+		end.execute(hero, "END");
 	}
 
 	@Override
@@ -162,8 +165,8 @@ public class Tengu extends Mob {
 	//tengu's attack is always visible
 	@Override
 	protected boolean doAttack(Char enemy) {
-		if (enemy == Dungeon.hero)
-			Dungeon.hero.resting = false;
+		if (enemy == hero)
+			hero.resting = false;
 		sprite.attack( enemy.pos );
 		spend( attackDelay() );
 		return true;
@@ -225,9 +228,9 @@ public class Tengu extends Mob {
 		BossHealthBar.assignBoss(this);
 		if (HP <= HT/2) BossHealthBar.bleed(true);
 		if (HP == HT) {
-			yell(Messages.get(this, "notice_mine", Dungeon.hero.givenName()));
+			yell(Messages.get(this, "notice_mine", hero.givenName()));
 		} else {
-			yell(Messages.get(this, "notice_face", Dungeon.hero.givenName()));
+			yell(Messages.get(this, "notice_face", hero.givenName()));
 		}
 	}
 	
