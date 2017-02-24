@@ -208,6 +208,7 @@ public abstract class RegularLevel extends Level {
 		{
 			specials.remove( Type.POOL );
 		}
+		specials.remove( Type.MAGIC_WELL ); // 변화의 우물 삭제
 
 		for (Room r : rooms) {
 			if (r.type == Type.NULL &&
