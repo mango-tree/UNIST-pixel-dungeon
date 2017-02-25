@@ -38,20 +38,22 @@ import com.watabou.noosa.TouchArea;
 
 public class AboutScene extends PixelScene {
 
+	private static final String TTL_UPD = "UNIST Pixel Dungeon";
+
+	private static final String TXT_UPD =
+			"Design, Code, & Graphics\n" +
+			"\t\t\t\t\t\t\t\t\t- UNIST HeXA -";
+
+	private static final String LNK_UPD =
+			"Github.com/mango-tree/UNIST-pixel-dungeon";
+
+
 	private static final String TTL_SHPX = "Shattered Pixel Dungeon";
 
 	private static final String TXT_SHPX =
 			"Design, Code, & Graphics: Evan";
 
 	private static final String LNK_SHPX = "ShatteredPixel.com";
-
-	private static final String TTL_WATA = "Pixel Dungeon";
-
-	private static final String TXT_WATA =
-			"Code & Graphics: Watabou\n" +
-			"Music: Cube_Code";
-	
-	private static final String LNK_WATA = "pixeldungeon.watabou.ru";
 	
 	@Override
 	public void create() {
@@ -59,85 +61,86 @@ public class AboutScene extends PixelScene {
 
 		final float colWidth = Camera.main.width / (UNISTPixelDungeon.landscape() ? 2 : 1);
 		final float colTop = (Camera.main.height / 2) - (UNISTPixelDungeon.landscape() ? 30 : 90);
-		final float wataOffset = UNISTPixelDungeon.landscape() ? colWidth : 0;
+		final float shpxOffset = UNISTPixelDungeon.landscape() ? colWidth : 0;
 
-		Image shpx = Icons.SHPX.get();
-		shpx.x = (colWidth - shpx.width()) / 2;
-		shpx.y = colTop;
-		align(shpx);
-		add( shpx );
+		final int UPD_COLOR = 0x88bfe8; // 하늘색
+		Image UPD = Icons.UPD.get();
+		UPD.x = (colWidth - UPD.width()) / 2;
+		UPD.y = colTop;
+		align(UPD);
+		add( UPD );
 
-		new Flare( 7, 64 ).color( 0x225511, true ).show( shpx, 0 ).angularSpeed = +20;
+		new Flare( 7, 100 ).color( 0x112233, true ).show( UPD, 0 ).angularSpeed = +20;
 
-		RenderedText shpxtitle = renderText( TTL_SHPX, 8 );
-		shpxtitle.hardlight( Window.SHPX_COLOR );
-		add( shpxtitle );
+		RenderedText UPDtitle = renderText(TTL_UPD, 8 );
+		UPDtitle.hardlight( UPD_COLOR );
+		add( UPDtitle );
 
-		shpxtitle.x = (colWidth - shpxtitle.width()) / 2;
-		shpxtitle.y = shpx.y + shpx.height + 5;
-		align(shpxtitle);
+		UPDtitle.x = (colWidth - UPDtitle.width()) / 2;
+		UPDtitle.y = UPD.y + UPD.height + 5;
+		align(UPDtitle);
 
-		RenderedTextMultiline shpxtext = renderMultiline( TXT_SHPX, 8 );
-		shpxtext.maxWidth((int)Math.min(colWidth, 120));
-		add( shpxtext );
+		RenderedTextMultiline UPDtext = renderMultiline(TXT_UPD, 8 );
+		UPDtext.maxWidth((int)Math.min(colWidth, 120));
+		add( UPDtext );
 
-		shpxtext.setPos((colWidth - shpxtext.width()) / 2, shpxtitle.y + shpxtitle.height() + 12);
-		align(shpxtext);
+		UPDtext.setPos((colWidth - UPDtext.width()) / 2, UPDtitle.y + UPDtitle.height() + 12);
+		align(UPDtext);
 
-		RenderedTextMultiline shpxlink = renderMultiline( LNK_SHPX, 8 );
-		shpxlink.maxWidth(shpxtext.maxWidth());
-		shpxlink.hardlight( Window.SHPX_COLOR );
-		add( shpxlink );
+		RenderedTextMultiline UPDlink = renderMultiline(LNK_UPD, 7 );
+		UPDlink.maxWidth(UPDtext.maxWidth());
+		UPDlink.hardlight( UPD_COLOR );
+		add( UPDlink );
 
-		shpxlink.setPos((colWidth - shpxlink.width()) / 2, shpxtext.bottom() + 6);
-		align(shpxlink);
+		UPDlink.setPos((colWidth - UPDlink.width()) / 2, UPDtext.bottom() + 6);
+		align(UPDlink);
 
-		TouchArea shpxhotArea = new TouchArea( shpxlink.left(), shpxlink.top(), shpxlink.width(), shpxlink.height() ) {
+		TouchArea shpxhotArea = new TouchArea( UPDlink.left(), UPDlink.top(), UPDlink.width(), UPDlink.height() ) {
 			@Override
 			protected void onClick( Touch touch ) {
-				Intent intent = new Intent( Intent.ACTION_VIEW, Uri.parse( "http://" + LNK_SHPX ) );
+				Intent intent = new Intent( Intent.ACTION_VIEW, Uri.parse( "http://" + LNK_UPD) );
 				Game.instance.startActivity( intent );
 			}
 		};
 		add( shpxhotArea );
 
-		Image wata = Icons.WATA.get();
-		wata.x = wataOffset + (colWidth - wata.width()) / 2;
-		wata.y = UNISTPixelDungeon.landscape() ?
-						colTop:
-						shpxlink.top() + wata.height + 20;
-		align(wata);
-		add( wata );
+		Image shpx = Icons.SHPX.get();
+		shpx.x = shpxOffset + (colWidth - shpx.width()) / 2;
+		shpx.y = UNISTPixelDungeon.landscape() ?
+						colTop + 15:
+						UPDlink.top() + shpx.height + 20;
+		align(shpx);
+		add( shpx );
 
-		new Flare( 7, 64 ).color( 0x112233, true ).show( wata, 0 ).angularSpeed = +20;
+		new Flare( 7, 36 ).color( 0x225511, true ).show( shpx, 0 ).angularSpeed = +20;
 
-		RenderedText wataTitle = renderText( TTL_WATA, 8 );
-		wataTitle.hardlight(Window.TITLE_COLOR);
-		add( wataTitle );
+		RenderedText shpxTitle = renderText(TTL_SHPX, 8 );
+		shpxTitle.hardlight(Window.SHPX_COLOR);
+		add( shpxTitle );
 
-		wataTitle.x = wataOffset + (colWidth - wataTitle.width()) / 2;
-		wataTitle.y = wata.y + wata.height + 11;
-		align(wataTitle);
+		shpxTitle.x = shpxOffset + (colWidth - shpxTitle.width()) / 2;
+		shpxTitle.y = shpx.y + shpx.height + 7;
+		align(shpxTitle);
 
-		RenderedTextMultiline wataText = renderMultiline( TXT_WATA, 8 );
-		wataText.maxWidth((int)Math.min(colWidth, 120));
-		add( wataText );
+		RenderedTextMultiline shpxText = renderMultiline(TXT_SHPX, 8 );
+		shpxText.maxWidth((int)Math.min(colWidth, 120));
+		add( shpxText );
 
-		wataText.setPos(wataOffset + (colWidth - wataText.width()) / 2, wataTitle.y + wataTitle.height() + 12);
-		align(wataText);
+		shpxText.setPos(shpxOffset + (colWidth - shpxText.width()) / 2, shpxTitle.y + shpxTitle.height() + 12);
+		align(shpxText);
 		
-		RenderedTextMultiline wataLink = renderMultiline( LNK_WATA, 8 );
-		wataLink.maxWidth((int)Math.min(colWidth, 120));
-		wataLink.hardlight(Window.TITLE_COLOR);
-		add(wataLink);
+		RenderedTextMultiline shpxLink = renderMultiline( LNK_SHPX, 8 );
+		shpxLink.maxWidth((int)Math.min(colWidth, 120));
+		shpxLink.hardlight(Window.SHPX_COLOR);
+		add(shpxLink);
 		
-		wataLink.setPos(wataOffset + (colWidth - wataLink.width()) / 2 , wataText.bottom() + 6);
-		align(wataLink);
+		shpxLink.setPos(shpxOffset + (colWidth - shpxLink.width()) / 2 , shpxText.bottom() + 126);
+		align(shpxLink);
 		
-		TouchArea hotArea = new TouchArea( wataLink.left(), wataLink.top(), wataLink.width(), wataLink.height() ) {
+		TouchArea hotArea = new TouchArea( shpxLink.left(), shpxLink.top(), shpxLink.width(), shpxLink.height() ) {
 			@Override
 			protected void onClick( Touch touch ) {
-				Intent intent = new Intent( Intent.ACTION_VIEW, Uri.parse( "http://" + LNK_WATA ) );
+				Intent intent = new Intent( Intent.ACTION_VIEW, Uri.parse( "http://" + LNK_SHPX) );
 				Game.instance.startActivity( intent );
 			}
 		};

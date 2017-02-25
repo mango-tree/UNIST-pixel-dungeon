@@ -36,21 +36,21 @@ public class GnollTricksterSprite extends MobSprite {
 
 		texture( Assets.GNOLL );
 
-		TextureFilm frames = new TextureFilm( texture, 12, 15 );
+		TextureFilm frames = new TextureFilm( texture, 16, 16 );
 
 		idle = new MovieClip.Animation( 2, true );
-		idle.frames( frames, 21, 21, 21, 22, 21, 21, 22, 22 );
+		idle.frames( frames, 16, 17, 18 );
 
 		run = new MovieClip.Animation( 12, true );
-		run.frames( frames, 25, 26, 27, 28 );
+		run.frames( frames, 19, 20, 25  );
 
 		attack = new MovieClip.Animation( 12, false );
-		attack.frames( frames, 23, 24, 21 );
+		attack.frames( frames, 22, 23, 24, 25, 26 );
 
 		cast = attack.clone();
 
 		die = new MovieClip.Animation( 12, false );
-		die.frames( frames, 29, 30, 31 );
+		die.frames( frames, 27, 28, 29, 30 );
 
 		play( idle );
 	}
