@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	package="com.unistpixel.unistpixeldungeon"
-	android:versionCode="148"
-	android:versionName="0.0.2a"
+	android:versionCode="149"
+	android:versionName="0.1.0a"
 	android:installLocation="auto">
 	<!-- Fork 해온 녹픽던 versionCode가 148 -->
 	
