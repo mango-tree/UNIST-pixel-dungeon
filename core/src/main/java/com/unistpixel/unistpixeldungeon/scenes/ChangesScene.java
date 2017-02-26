@@ -37,70 +37,10 @@ import com.watabou.noosa.ui.Component;
 public class ChangesScene extends PixelScene {
 
 	private static final String TXT_Update =
-			"_v0.4.3c:_\n" +
-			"_-_ Additional bugfixes\n" +
-			"\n" +
-			"_v0.4.3b:_\n" +
-			"_-_ Thrown potions now trigger traps and plants\n" +
-			"_-_ Various bugfixes\n" +
-			"\n" +
-			"_v0.4.3a:_\n" +
-			"_-_ Reworked glyph of brimstone\n" +
-			"\t \tnow grants shielding instead of healing\n" +
-			"_-_ Reworked glyph of stone\n" +
-			"\t \tnow reduces speed in doorways\n" +
-			"_-_ Power saver looks less blurry on some devices\n" +
-			"\n" +
-			"_v0.4.3:_\n" +
-			"General Improvements:\n" +
-			"_-_ Added rankings and hall of heroes sync\n" +
-			"_-_ Added Power Saver mode in settings\n" +
-			"_-_ Game now supports small screen devices\n" +
-			"_-_ Improved variety of level visuals\n" +
-			"\n" +
-			"Balance Changes:\n" +
-			"_-_ Flail max damage increased by ~15%\n" +
-			"_-_ Wand of Frost damage reduction increased\n" +
-			"\t \tfrom 5% per turn of chill to 7.5%\n" +
-			"_-_ Ring of Furor speed bonus reduced by\n" +
-			"\t \t~15% for slow weapons, ~0% for fast weapons\n" +
-			"_-_ Reduced sacrificial curse bleed by ~33%\n" +
-			"\n" +
-			"_v0.4.2:_\n" +
-			"_-_ Improved performance on many devices\n" +
-			"_-_ Various balance changes\n" +
-			"\n" +
-			"_v0.4.1:_\n" +
-			"_-_ Armor effectiveness increased\n" +
-			"_-_ Evil Eyes reworked\n" +
-			"\n" +
-			"_v0.4.0:_ Reworked equips, enchants & curses\n" +
-			"\n" +
-			"_v0.3.5:_ Reworked Warrior & subclasses\n" +
-			"\n"+
-			"_v0.3.4:_ Multiple language support\n" +
-			"\n" +
-			"_v0.3.3:_ Support for Google Play Games\n" +
-			"\n" +
-			"_v0.3.2:_ Prison Rework & Balance Changes\n" +
-			"\n" +
-			"_v0.3.1:_ Traps reworked & UI upgrades\n" +
-			"\n" +
-			"_v0.3.0:_ Wands & Mage completely reworked\n" +
-			"\n" +
-			"_v0.2.4:_ Small improvements and tweaks\n" +
-			"\n" +
-			"_v0.2.3:_ Artifact additions & improvements\n" +
-			"\n" +
-			"_v0.2.2:_ Small improvements and tweaks\n" +
-			"\n" +
-			"_v0.2.1:_ Sewer improvements\n" +
-			"\n" +
-			"_v0.2.0:_ Added artifacts, reworked rings\n" +
-			"\n" +
-			"_v0.1.1:_ Added blandfruit, reworked dew vial\n" +
-			"\n" +
-			"_v0.1.0:_ Improvements to potions/scrolls";
+			"_v0.1.0a:_\n"
+					+ "_-_ UNIST 유일 컴퓨터 연구개발 동아리 _HeXA_ 에서 Shattered Pixel Dungeon 소스 코드를 기반으로 유니스트 스타일로 재구성한 _UNIST Pixel Dungeon_ 입니다.\n"
+					+ "\n"
+					+ "_-_ 버그가 있다거나 더 좋은 아이디어가 있으시다면 언제든지 _jjkyc@naver.com_ 으로 메일 주세요!";
 
 	@Override
 	public void create() {
