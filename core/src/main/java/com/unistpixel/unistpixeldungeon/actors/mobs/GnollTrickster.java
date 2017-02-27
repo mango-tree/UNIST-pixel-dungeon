@@ -49,8 +49,10 @@ public class GnollTrickster extends Gnoll {
 
 		state = WANDERING;
 
+		/* 마비독 다트가 나오지 않게 수정
 		loot = Generator.random(CurareDart.class);
 		lootChance = 1f;
+		*/
 
 		properties.add(Property.MINIBOSS);
 	}

@@ -238,6 +238,13 @@ abstract public class Weapon extends KindOfWeapon {
 	}
 	
 	public Weapon enchant( Enchantment ench ) {
+		// Enchant 라면 적용 안하고
+		for( int i=0; i < Enchantment.enchants.length; i++ )
+		{
+			if( ench.equals(Enchantment.enchants[i]) )
+				return this;
+		}
+		// Curse 라면 적용 한다.
 		enchantment = ench;
 		return this;
 	}

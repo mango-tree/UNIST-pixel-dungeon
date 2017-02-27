@@ -55,19 +55,20 @@ public class Potion extends Item {
 
 	protected Integer initials;
 
+	// 사용하지 않는 물약들 카탈로그에서 삭제
 	private static final Class<?>[] potions = {
 			PotionOfHealing.class,
 			PotionOfExperience.class,
-			PotionOfToxicGas.class,
+			// PotionOfToxicGas.class,
 			PotionOfLiquidFlame.class,
 			PotionOfStrength.class,
-			PotionOfParalyticGas.class,
+			// PotionOfParalyticGas.class,
 			PotionOfLevitation.class,
 			PotionOfMindVision.class,
-			PotionOfPurity.class,
+			// PotionOfPurity.class,
 			PotionOfInvisibility.class,
-			PotionOfMight.class,
-			PotionOfFrost.class
+			// PotionOfMight.class,
+			// PotionOfFrost.class
 	};
 
 	private static final HashMap<String, Integer> colors = new HashMap<String, Integer>() {
