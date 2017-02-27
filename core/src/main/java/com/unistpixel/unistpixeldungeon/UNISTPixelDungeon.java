@@ -467,7 +467,7 @@ public class UNISTPixelDungeon extends Game {
 	}
 	
 	public static int brightness() {
-		return Preferences.INSTANCE.getInt( Preferences.KEY_BRIGHTNESS, 0, -2, 2 );
+		return Preferences.INSTANCE.getInt( Preferences.KEY_BRIGHTNESS, 1, -2, 2 );
 	}
 
 	public static void language(Languages lang) {
