@@ -2,7 +2,8 @@
 
 Traditional rougelike game introducing about UNIST. Based on the source code of Shattered Pixel Dungeon
 
-Source code of Shattered Pixel Dungeon: (https://github.com/00-Evan/shattered-pixel-dungeon)[https://github.com/00-Evan/shattered-pixel-dungeon]
+Source code of Shattered Pixel Dungeon: 
+https://github.com/00-Evan/shattered-pixel-dungeon
 
 ##Developer:
 mango-tree: 
