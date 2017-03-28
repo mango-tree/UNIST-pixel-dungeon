@@ -10,7 +10,7 @@ mango-tree:
 https://github.com/mango-tree
 
 HealthyVegeta: 
-https://github.com/HealthVegeta
+https://github.com/healthyvegeta
 
 kcm4482: 
 https://github.com/kcm4482
