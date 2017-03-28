@@ -9,8 +9,8 @@ https://github.com/00-Evan/shattered-pixel-dungeon
 mango-tree: 
 https://github.com/mango-tree
 
-Antihacking: 
-https://github.com/AntiHacking
+HealthyVegeta: 
+https://github.com/HealthVegeta
 
 kcm4482: 
 https://github.com/kcm4482
