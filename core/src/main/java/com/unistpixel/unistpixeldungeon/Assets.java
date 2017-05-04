@@ -93,7 +93,7 @@ public class Assets {
 	// public static final String TENGU	= "tengu.png";
 	public static final String TENGU	= "UPD/new_final_professor.png";
 
-	public static final String SHEEP	= "sheep.png";
+	public static final String SHEEP	= "UPD/new_manybooks.png";
 
 	// public static final String KEEPER	= "shopkeeper.png";
 	public static final String KEEPER	= "UPD/new_shopkeeper.png";
